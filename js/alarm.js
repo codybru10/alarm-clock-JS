@@ -5,17 +5,15 @@ function Clock(setAlarm) {
 }
 
 Clock.prototype.alarm = function (setTime) {
-  alert("works");
-  debugger;
-
-  var currentTime = currentTime.moment().format('dddd YYYY, LTS');
+  var output = false;
+  var currentTime = moment().format("HH:mm");
   setInterval(function(){
     if (currentTime === setTime) {
-      alert("Wake up!");
+      output = true;
+      $('#final').prepend('<li>' + 'wake up!' + '</li>')
     }
-    return;
-  }, 1000);
-
+  }, 5000);
+  return output;
 };
 
 
