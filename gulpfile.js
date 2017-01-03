@@ -58,9 +58,6 @@ gulp.task('bowerBuild', ['bower'], function(){
 });
 
 
-
-
-
 gulp.task("clean", function() {
   return del(['build', 'tmp']);
 });
